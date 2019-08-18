@@ -1,0 +1,16 @@
+responses:
+  - label: "sample"
+    path: "/test"
+    method: "POST"
+    code: 200
+    body: '{"testa":"testb"}'
+  - label: "example"
+    path: "/test2"
+    method: "POST"
+    code: 200
+    body: '{"hoge":"fuga"}'
+  - label: "example"
+    path: "/test2"
+    method: "PUT"
+    code: 200
+    body: '{"hogeput":"fugaput"}'

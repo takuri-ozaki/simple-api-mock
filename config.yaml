@@ -1,0 +1,2 @@
+port: 8080
+logPath: "simple-api-mock.log"
