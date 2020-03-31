@@ -18,6 +18,8 @@ func main() {
 
 	router.Any("/*path", func(c *gin.Context) {
 		logger.Info("path:" + c.Request.RequestURI + "\tmethod:" + c.Request.Method + "\tbody:" + streamToString(c.Request.Body))
+		c.Header("Access-Control-Allow-Origin", "*")
+		c.Header("Access-Control-Allow-Headers", "*")
 		res, err := conf.Contain(c.Request.RequestURI, c.Request.Method)
 		if err != nil {
 			c.String(404, "api not found")

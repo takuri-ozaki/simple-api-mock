@@ -22,7 +22,7 @@ type Config struct {
 
 func (d *Data) Contain(path string, method string) (Response, error) {
 	for _, r := range d.Responses {
-		if r.Path == path && r.Method == method {
+		if r.Path == path && (r.Method == method || method == "OPTIONS") {
 			return r, nil
 		}
 	}
